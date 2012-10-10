@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace D3Bit
 {
@@ -212,8 +210,9 @@ namespace D3Bit
 
         public static void LoadAffixes(string languageCode)
         {
-            string json = File.ReadAllText(string.Format(@"data\affixes.{0}.json", languageCode));
-            affixMatches = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+            // FIXME: use MacMono Json parse to enable localization support
+            // string json = File.ReadAllText(string.Format(@"data\affixes.{0}.json", languageCode));
+            // affixMatches = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
         }
 
     }
