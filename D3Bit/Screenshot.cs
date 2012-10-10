@@ -176,7 +176,6 @@ namespace D3Bit
                     l.Count() > 4 &&
                     l.Count() == l.Where(i => Math.Abs(i.XLength - l.First().XLength) < i.XLength*0.1).Count()).OrderByDescending(
                         l => l.First().XLength).ThenByDescending(l => l.Count());
-            int x = groups.Count();
             if (groups.Count() > 0)
             {
                 lines = groups.ElementAt(0).ToList();
@@ -190,6 +189,46 @@ namespace D3Bit
                     lastY = line.P1.Y;
                 }
 
+                var min = new Point(bitmap.Width, bitmap.Height);
+                var max = new Point(0, 0);
+                foreach (var line in groups.ElementAt(0))
+                {
+                    if (line.P1.X <= min.X && line.P1.Y <= min.Y)
+                        min = line.P1;
+                    else if (line.P2.X >= max.X && line.P2.Y >= max.Y)
+                        max = line.P2;
+                }
+                Bound bound = new Bound(min, max);
+                if (clusterCount==2)
+                    bound = new Bound(new Point(min.X, min.Y - (int)Math.Round((42/410.0)*(max.X-min.X))), max);
+                return bitmap.Clone(bound.ToRectangle(), bitmap.PixelFormat);
+            }
+            return null;
+        }
+
+//      TODO: GetAuctionHouseSearchResults lots of duplication from GetToolTip needs to be refactored
+        public static Bitmap GetAuctionHouseSearchResults(Bitmap bitmap)
+        {
+            var lines = ImageUtil.FindHorizontalLines(bitmap, 670, 700, new int[] { 0, 10, 0, 10, 0, 10 });
+            var groups =
+                lines.GroupBy(l => l.P1.X).Where(
+                    l =>
+                    l.Last().P1.Y - l.First().P1.Y > 200 &&
+                    l.Count() > 4 &&
+                    l.Count() == l.Where(i => Math.Abs(i.XLength - l.First().XLength) < i.XLength*0.1).Count()).OrderByDescending(
+                    l => l.First().XLength).ThenByDescending(l => l.Count());
+            if (groups.Count() > 0)
+            {
+                lines = groups.ElementAt(0).ToList();
+                int clusterCount = 0;
+                int lastY = lines.ElementAt(0).P1.Y;
+                foreach (var line in lines)
+                {
+                    if (line.P1.Y - lastY > 5)
+                        clusterCount++;
+                    lastY = line.P1.Y;
+                }
+                
                 var min = new Point(bitmap.Width, bitmap.Height);
                 var max = new Point(0, 0);
                 foreach (var line in groups.ElementAt(0))
