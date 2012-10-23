@@ -1,7 +1,7 @@
 using System;
+using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
-using System.Drawing;
 using System.IO;
 using System.Reflection;
 
@@ -14,7 +14,6 @@ namespace D3BitMacConsole
 {
     class MainClass
     {
-
         public static void Main (string[] args)
         {
             // FIXME: find a better way to parse the command line arguments
@@ -46,30 +45,41 @@ namespace D3BitMacConsole
                         var affixes = tooltip.ParseAffixes(out socketBonus);        // parse affixes
                         string stats = String.Join(", ", affixes.Select(kv => (kv.Value + " " + kv.Key).Trim()));
 
-                        List<NSObject> itemObjects = new List<NSObject> {
-                                                            new NSString(name),
-                                                            new NSString(quality),
-                                                            new NSString(itemType),
-                                                            new NSString(dpsArmor),
-                                                            new NSString(meta),
-                                                            new NSString(socketBonus),
-                                                            new NSString(stats) };
+                        var itemObjs = new NSObject[] {
+                            new NSString(name),
+                            new NSString(quality),
+                            new NSString(itemType),
+                            new NSString(dpsArmor),
+                            new NSString(meta),
+                            new NSString(socketBonus),
+                            new NSString(stats)
+                        };
+//
+                        var itemKeys = new NSObject[] {
+                            new NSString("Name"),
+                            new NSString("Quality"),
+                            new NSString("ItemType"),
+                            new NSString("DpsArmor"),
+                            new NSString("Meta"),
+                            new NSString("SocketBonus"),
+                            new NSString("Affixes")
+                        };
+//
+//                        var itemDict = NSDictionary.FromObjectsAndKeys(itemObjs, itemKeys);
+//
+//                        NSError error = null;
+//                        NSData jsonData = NSJsonSerialization.Serialize(itemDict, new NSJsonWritingOptions(), out error);
+//
+//                        NSString jsonString = NSString.FromData(jsonData, NSStringEncoding.UTF8);
 
-                        List<NSObject> itemKeys = new List<NSObject> {
-                                                            new NSString("Name"),
-                                                            new NSString("Quality"),
-                                                            new NSString("ItemType"),
-                                                            new NSString("DpsArmor"),
-                                                            new NSString("Meta"),
-                                                            new NSString("SocketBonus"),
-                                                            new NSString("Affixes") };
-
-                        NSDictionary item = NSDictionary.FromObjectsAndKeys(itemObjects.ToArray(), itemKeys.ToArray());
-
-                        NSError error = null;
-                        NSData jsonData = NSJsonSerialization.Serialize(item, new NSJsonWritingOptions(), out error);
-
-                        NSString jsonString = NSString.FromData(jsonData, NSStringEncoding.UTF8);
+                        // FIXME: very hackish but issues getting NSDictionary and NSJsonSerialization working...
+                        var jsonString = "";
+                        jsonString = jsonString + "{ ";
+                        for (int i = 0; i < 7; i++) {
+                            jsonString = jsonString + String.Format("\"{0}\": \"{1}\", ",
+                                                       itemKeys.ElementAt(i), itemObjs.ElementAt(i));
+                        }
+                        jsonString = jsonString + " \"CreatedAt\": \"\" }";
                         Console.WriteLine(jsonString);
                     }
                 }
@@ -93,3 +103,4 @@ namespace D3BitMacConsole
         }
     }
 }
+
