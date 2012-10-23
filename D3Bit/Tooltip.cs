@@ -42,7 +42,6 @@ namespace D3Bit
             //itemNameBlock = ImageUtil.ResizeImage(itemNameBlock, itemNameBlock.Width * 10, itemNameBlock.Height * 10);
             itemNameBlock = ImageUtil.ResizeImage(itemNameBlock, (int)(90.0 / itemNameBlock.Height * itemNameBlock.Width), 90);
             itemName = Tesseract.GetTextFromBitmap(itemNameBlock).Replace("\r", "").Replace("\n", " ").Replace("GB", "O").Replace("G3", "O").Replace("EB", "O").Replace("G9", "O");
-            itemName = Tesseract.CorrectSpelling(itemName);
             //itemName = Regex.Replace(itemName, "([AEIOUM]|^)ITI", "$1M");
             return itemName;
         }

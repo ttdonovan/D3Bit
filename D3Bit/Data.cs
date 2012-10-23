@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -206,6 +207,13 @@ namespace D3Bit
                                                                  {"Z-Hydra", "Reduces resource cost of Hydra by {i} Arcane Power."},
                                                                  {"Z-RoF", "Increases Critical Chance of Ray of Frost by {i}%"}
                                                              };
+
+        public static void LoadAffixes(string languageCode)
+        {
+            // FIXME: use MacMono Json parse to enable localization support
+            // string json = File.ReadAllText(string.Format(@"data\affixes.{0}.json", languageCode));
+            // affixMatches = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+        }
 
     }
 }

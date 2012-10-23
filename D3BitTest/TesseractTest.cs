@@ -25,13 +25,6 @@ namespace D3BitTest
             Bitmap bm = new Bitmap(file);
             Assert.AreEqual("ALLIANCE CARNAGE", Tesseract.GetTextFromBitmap(bm, @"nobatch " + Path.Combine("tesseract", "d3letters")));
         }
-
-        [Test()]
-        [Ignore("Pending D3Bit.Tesseract.CorrectSpelling")]
-        public void CorrectSpellingTestCase()
-        {
-            Assert.AreEqual(true, false);
-        }
     }
 }
 
