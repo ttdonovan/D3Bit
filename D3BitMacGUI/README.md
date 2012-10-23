@@ -10,21 +10,7 @@ Installation of Tesseract (using Homebrew http://mxcl.github.com/homebrew/)
 $ brew install tesseract
 ```
 
-Save OS X screencaptures as Bitmap images
-
-Open Terminal applicaiton
-```
-$ defaults write com.apple.screencapture type bmp
-```
-
-To revert back to PNG
-```
-$ defaults write com.apple.screencapture type png
-```
-
 ## Additional Manual Setup Steps
-
-If experience issues with the Release try the following manual setup steps.
 
 Not certain how to configure MonoDevelop correctly to package these resources in the build correctly.
 
@@ -32,7 +18,7 @@ Not certain how to configure MonoDevelop correctly to package these resources in
 
 ```
 $ cd path/to/D3Bit
-$ open D3BitMacGUI/D3BitMacGUI/bin/Release/D3BitMacGUI.app/Contents/
+$ open D3BitMacGUI/D3BitMacGUI/bin/Debug/D3BitMacGUI.app/Contents/
 $ open Release/
 ```
 

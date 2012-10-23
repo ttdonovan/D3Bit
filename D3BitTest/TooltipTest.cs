@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -9,7 +10,6 @@ using D3Bit;
 namespace D3BitTest
 {
     [TestFixture()]
-//  FIXME: had to copy en_US.aff and en_US.dic and tesseract from D3Bit/Build to D3Bit/bin/Debug
 //  FIXME: is this really the best way to open the image files in NUnit?
     public class TooltipTest
     {
@@ -64,11 +64,16 @@ namespace D3BitTest
             string file = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "..", "..", "images", "05_d3_tooltip_rare.bmp");
             Bitmap bm = new Bitmap(file);
             Tooltip tooltip = new Tooltip(bm);
-            string actual = "";
-            tooltip.ParseAffixes(out actual);
-            // FIXME: set expected value in ParseAffixesTestCase() is the empty string correct?
-            string expected = "";
-            Assert.AreEqual(expected, actual);
+            string actual_socket = "";
+            Dictionary<string, string> actual_affixes = tooltip.ParseAffixes(out actual_socket);
+            Assert.AreEqual("", actual_socket);
+            Dictionary<string, string> expected_affixes = new Dictionary<string, string>();
+            expected_affixes.Add("MinD", "299");
+            expected_affixes.Add("MaxD", "398");
+            expected_affixes.Add("Dmg%", "42");
+            expected_affixes.Add("Dex", "54");
+            expected_affixes.Add("LoH", "858");
+            Assert.AreEqual(expected_affixes, actual_affixes);
         }
     }
 }

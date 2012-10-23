@@ -42,7 +42,6 @@
     <Compile Include="ScreenshotTest.cs" />
     <Compile Include="TesseractTest.cs" />
     <Compile Include="TooltipTest.cs" />
-    <Compile Include="AuctionHouseTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

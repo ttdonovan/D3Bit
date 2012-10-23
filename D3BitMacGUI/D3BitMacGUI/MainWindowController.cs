@@ -53,7 +53,7 @@ namespace D3BitMacGUI
 			}
 		}
 
-        public override void  AwakeFromNib() {           
+        public override void  AwakeFromNib() {
             webView.MainFrame.LoadRequest(new NSUrlRequest (new NSUrl ("http://d3bit.com/c")));
         }
 
