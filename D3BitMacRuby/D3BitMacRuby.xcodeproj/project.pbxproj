@@ -15,6 +15,9 @@
 		C3A55E8516390CA6009F7632 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = C3A55E8416390CA6009F7632 /* rb_main.rb */; };
 		C3A55E8716390CA6009F7632 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = C3A55E8616390CA6009F7632 /* AppDelegate.rb */; };
 		C3A55E8A16390CA6009F7632 /* D3BitMacRuby.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3A55E8816390CA6009F7632 /* D3BitMacRuby.xcdatamodeld */; };
+		C3A55E9516390EF6009F7632 /* main_window_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = C3A55E9416390EF6009F7632 /* main_window_controller.rb */; };
+		C3A55E9816390F96009F7632 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A55E9616390F96009F7632 /* MainWindow.xib */; };
+		C3A55E9E1639113D009F7632 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A55E9D1639113D009F7632 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 		C3A55E8416390CA6009F7632 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		C3A55E8616390CA6009F7632 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		C3A55E8916390CA6009F7632 /* D3BitMacRuby.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = D3BitMacRuby.xcdatamodel; sourceTree = "<group>"; };
+		C3A55E9416390EF6009F7632 /* main_window_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = main_window_controller.rb; sourceTree = "<group>"; };
+		C3A55E9716390F96009F7632 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		C3A55E9D1639113D009F7632 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3A55E7016390CA6009F7632 /* Cocoa.framework in Frameworks */,
+				C3A55E9E1639113D009F7632 /* WebKit.framework in Frameworks */,
 				C3A55E7216390CA6009F7632 /* MacRuby.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				C3A55E6F16390CA6009F7632 /* Cocoa.framework */,
+				C3A55E9D1639113D009F7632 /* WebKit.framework */,
 				C3A55E7116390CA6009F7632 /* MacRuby.framework */,
 			);
 			name = Frameworks;
@@ -83,6 +91,7 @@
 		C3A55E7616390CA6009F7632 /* D3BitMacRuby */ = {
 			isa = PBXGroup;
 			children = (
+				C3A55E9316390EC5009F7632 /* Classes */,
 				C3A55E8616390CA6009F7632 /* AppDelegate.rb */,
 				C3A55E8816390CA6009F7632 /* D3BitMacRuby.xcdatamodeld */,
 				C3A55E7F16390CA6009F7632 /* Resources */,
@@ -106,6 +115,7 @@
 		C3A55E7F16390CA6009F7632 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C3A55E9616390F96009F7632 /* MainWindow.xib */,
 				C3A55E8016390CA6009F7632 /* MainMenu.xib */,
 			);
 			name = Resources;
@@ -117,6 +127,14 @@
 				C3A55E8416390CA6009F7632 /* rb_main.rb */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		C3A55E9316390EC5009F7632 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C3A55E9416390EF6009F7632 /* main_window_controller.rb */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +210,8 @@
 				C3A55E8216390CA6009F7632 /* MainMenu.xib in Resources */,
 				C3A55E8516390CA6009F7632 /* rb_main.rb in Resources */,
 				C3A55E8716390CA6009F7632 /* AppDelegate.rb in Resources */,
+				C3A55E9516390EF6009F7632 /* main_window_controller.rb in Resources */,
+				C3A55E9816390F96009F7632 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +252,14 @@
 				C3A55E8116390CA6009F7632 /* en */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		C3A55E9616390F96009F7632 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3A55E9716390F96009F7632 /* en */,
+			);
+			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -355,6 +383,7 @@
 				C3A55E8F16390CA6009F7632 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3A55E9016390CA6009F7632 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
 			isa = XCConfigurationList;
@@ -363,6 +392,7 @@
 				C3A55E9216390CA6009F7632 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -10,6 +10,10 @@ class AppDelegate
   attr_accessor :window
   def applicationDidFinishLaunching(a_notification)
     # Insert code here to initialize your application
+    nib = NSNib.alloc.initWithNibNamed('MainWindow', bundle: nil)
+    main_window = MainWindowController.new
+    nib.instantiateNibWithOwner(main_window, topLevelObjects:nil)
+    main_window.showWindow(self)
   end
 
   # Persistence accessors
