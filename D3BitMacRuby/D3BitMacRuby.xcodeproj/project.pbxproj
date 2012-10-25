@@ -1,0 +1,383 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3A55E7016390CA6009F7632 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A55E6F16390CA6009F7632 /* Cocoa.framework */; };
+		C3A55E7216390CA6009F7632 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A55E7116390CA6009F7632 /* MacRuby.framework */; };
+		C3A55E7B16390CA6009F7632 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3A55E7916390CA6009F7632 /* InfoPlist.strings */; };
+		C3A55E7D16390CA6009F7632 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A55E7C16390CA6009F7632 /* main.m */; };
+		C3A55E8216390CA6009F7632 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A55E8016390CA6009F7632 /* MainMenu.xib */; };
+		C3A55E8516390CA6009F7632 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = C3A55E8416390CA6009F7632 /* rb_main.rb */; };
+		C3A55E8716390CA6009F7632 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = C3A55E8616390CA6009F7632 /* AppDelegate.rb */; };
+		C3A55E8A16390CA6009F7632 /* D3BitMacRuby.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3A55E8816390CA6009F7632 /* D3BitMacRuby.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C3A55E7416390CA6009F7632 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3A55E6216390CA6009F7632 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3A55E6A16390CA6009F7632;
+			remoteInfo = D3BitMacRuby;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C3A55E6B16390CA6009F7632 /* D3BitMacRuby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D3BitMacRuby.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3A55E6F16390CA6009F7632 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C3A55E7116390CA6009F7632 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		C3A55E7816390CA6009F7632 /* D3BitMacRuby-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "D3BitMacRuby-Info.plist"; sourceTree = "<group>"; };
+		C3A55E7A16390CA6009F7632 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C3A55E7C16390CA6009F7632 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C3A55E7E16390CA6009F7632 /* D3BitMacRuby-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "D3BitMacRuby-Prefix.pch"; sourceTree = "<group>"; };
+		C3A55E8116390CA6009F7632 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C3A55E8416390CA6009F7632 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		C3A55E8616390CA6009F7632 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		C3A55E8916390CA6009F7632 /* D3BitMacRuby.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = D3BitMacRuby.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3A55E6816390CA6009F7632 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A55E7016390CA6009F7632 /* Cocoa.framework in Frameworks */,
+				C3A55E7216390CA6009F7632 /* MacRuby.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3A55E6016390CA6009F7632 = {
+			isa = PBXGroup;
+			children = (
+				C3A55E7616390CA6009F7632 /* D3BitMacRuby */,
+				C3A55E6E16390CA6009F7632 /* Frameworks */,
+				C3A55E6C16390CA6009F7632 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3A55E6C16390CA6009F7632 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3A55E6B16390CA6009F7632 /* D3BitMacRuby.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3A55E6E16390CA6009F7632 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3A55E6F16390CA6009F7632 /* Cocoa.framework */,
+				C3A55E7116390CA6009F7632 /* MacRuby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3A55E7616390CA6009F7632 /* D3BitMacRuby */ = {
+			isa = PBXGroup;
+			children = (
+				C3A55E8616390CA6009F7632 /* AppDelegate.rb */,
+				C3A55E8816390CA6009F7632 /* D3BitMacRuby.xcdatamodeld */,
+				C3A55E7F16390CA6009F7632 /* Resources */,
+				C3A55E8316390CA6009F7632 /* Other Sources */,
+				C3A55E7716390CA6009F7632 /* Supporting Files */,
+			);
+			path = D3BitMacRuby;
+			sourceTree = "<group>";
+		};
+		C3A55E7716390CA6009F7632 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3A55E7816390CA6009F7632 /* D3BitMacRuby-Info.plist */,
+				C3A55E7916390CA6009F7632 /* InfoPlist.strings */,
+				C3A55E7C16390CA6009F7632 /* main.m */,
+				C3A55E7E16390CA6009F7632 /* D3BitMacRuby-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C3A55E7F16390CA6009F7632 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3A55E8016390CA6009F7632 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C3A55E8316390CA6009F7632 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C3A55E8416390CA6009F7632 /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		C3A55E7316390CA6009F7632 /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = C3A55E9016390CA6009F7632 /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+				C3A55E7516390CA6009F7632 /* PBXTargetDependency */,
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		C3A55E6A16390CA6009F7632 /* D3BitMacRuby */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3A55E8D16390CA6009F7632 /* Build configuration list for PBXNativeTarget "D3BitMacRuby" */;
+			buildPhases = (
+				C3A55E6716390CA6009F7632 /* Sources */,
+				C3A55E6816390CA6009F7632 /* Frameworks */,
+				C3A55E6916390CA6009F7632 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = D3BitMacRuby;
+			productName = D3BitMacRuby;
+			productReference = C3A55E6B16390CA6009F7632 /* D3BitMacRuby.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3A55E6216390CA6009F7632 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Tanner Donovan";
+			};
+			buildConfigurationList = C3A55E6516390CA6009F7632 /* Build configuration list for PBXProject "D3BitMacRuby" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C3A55E6016390CA6009F7632;
+			productRefGroup = C3A55E6C16390CA6009F7632 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3A55E6A16390CA6009F7632 /* D3BitMacRuby */,
+				C3A55E7316390CA6009F7632 /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3A55E6916390CA6009F7632 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A55E7B16390CA6009F7632 /* InfoPlist.strings in Resources */,
+				C3A55E8216390CA6009F7632 /* MainMenu.xib in Resources */,
+				C3A55E8516390CA6009F7632 /* rb_main.rb in Resources */,
+				C3A55E8716390CA6009F7632 /* AppDelegate.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3A55E6716390CA6009F7632 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A55E7D16390CA6009F7632 /* main.m in Sources */,
+				C3A55E8A16390CA6009F7632 /* D3BitMacRuby.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3A55E7516390CA6009F7632 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3A55E6A16390CA6009F7632 /* D3BitMacRuby */;
+			targetProxy = C3A55E7416390CA6009F7632 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C3A55E7916390CA6009F7632 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3A55E7A16390CA6009F7632 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C3A55E8016390CA6009F7632 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3A55E8116390CA6009F7632 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3A55E8B16390CA6009F7632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C3A55E8C16390CA6009F7632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C3A55E8E16390CA6009F7632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					"\"/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "D3BitMacRuby/D3BitMacRuby-Prefix.pch";
+				INFOPLIST_FILE = "D3BitMacRuby/D3BitMacRuby-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C3A55E8F16390CA6009F7632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					"\"/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "D3BitMacRuby/D3BitMacRuby-Prefix.pch";
+				INFOPLIST_FILE = "D3BitMacRuby/D3BitMacRuby-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C3A55E9116390CA6009F7632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		C3A55E9216390CA6009F7632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3A55E6516390CA6009F7632 /* Build configuration list for PBXProject "D3BitMacRuby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3A55E8B16390CA6009F7632 /* Debug */,
+				C3A55E8C16390CA6009F7632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3A55E8D16390CA6009F7632 /* Build configuration list for PBXNativeTarget "D3BitMacRuby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3A55E8E16390CA6009F7632 /* Debug */,
+				C3A55E8F16390CA6009F7632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C3A55E9016390CA6009F7632 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3A55E9116390CA6009F7632 /* Debug */,
+				C3A55E9216390CA6009F7632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C3A55E8816390CA6009F7632 /* D3BitMacRuby.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C3A55E8916390CA6009F7632 /* D3BitMacRuby.xcdatamodel */,
+			);
+			currentVersion = C3A55E8916390CA6009F7632 /* D3BitMacRuby.xcdatamodel */;
+			path = D3BitMacRuby.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C3A55E6216390CA6009F7632 /* Project object */;
+}
