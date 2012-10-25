@@ -10,12 +10,10 @@ class MainWindowController < NSWindowController
   attr_accessor :open_button, :item_image_well, :item_text_view, :web_view
 
   def awakeFromNib
-    # FIXME: shouldn't IBOutlest be available in awakFromNib? @web_view is nil.
-    # @web_view.frameLoadDelegate = self
-  end
-  
-  def viewDidLoad
+    # FIXME: shouldn't IBOutlest be available in awakFromNib? @web_view is nil. see AppDelegate #applicationDidFinishLaunching
     @web_view.frameLoadDelegate = self
+    url = NSURL.alloc.initWithString("http://d3bit.com/c")
+    @web_view.mainFrame.loadRequest NSURLRequest.requestWithURL(url)
   end
   
   def press_open_button(sender)

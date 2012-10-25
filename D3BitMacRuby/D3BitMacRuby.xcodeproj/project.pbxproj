@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C36A1A531639235C00291CDC /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36A1A521639235C00291CDC /* MacRuby.framework */; };
 		C3A55E7016390CA6009F7632 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A55E6F16390CA6009F7632 /* Cocoa.framework */; };
-		C3A55E7216390CA6009F7632 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A55E7116390CA6009F7632 /* MacRuby.framework */; };
 		C3A55E7B16390CA6009F7632 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3A55E7916390CA6009F7632 /* InfoPlist.strings */; };
 		C3A55E7D16390CA6009F7632 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A55E7C16390CA6009F7632 /* main.m */; };
 		C3A55E8216390CA6009F7632 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A55E8016390CA6009F7632 /* MainMenu.xib */; };
@@ -31,9 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C36A1A521639235C00291CDC /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = /Library/Frameworks/MacRuby.framework; sourceTree = "<absolute>"; };
 		C3A55E6B16390CA6009F7632 /* D3BitMacRuby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D3BitMacRuby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A55E6F16390CA6009F7632 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		C3A55E7116390CA6009F7632 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
 		C3A55E7816390CA6009F7632 /* D3BitMacRuby-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "D3BitMacRuby-Info.plist"; sourceTree = "<group>"; };
 		C3A55E7A16390CA6009F7632 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C3A55E7C16390CA6009F7632 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,9 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36A1A531639235C00291CDC /* MacRuby.framework in Frameworks */,
 				C3A55E7016390CA6009F7632 /* Cocoa.framework in Frameworks */,
 				C3A55E9E1639113D009F7632 /* WebKit.framework in Frameworks */,
-				C3A55E7216390CA6009F7632 /* MacRuby.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 			children = (
 				C3A55E6F16390CA6009F7632 /* Cocoa.framework */,
 				C3A55E9D1639113D009F7632 /* WebKit.framework */,
-				C3A55E7116390CA6009F7632 /* MacRuby.framework */,
+				C36A1A521639235C00291CDC /* MacRuby.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
